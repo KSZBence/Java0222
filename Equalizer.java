@@ -7,11 +7,13 @@ public class Equalizer {
     static Random rnd = new Random();
     
     public static void main(String[] args) {
-        eq();
-        eq();
-        eq();
-        eq();
-        eq();
+        fel1equ();
+    }
+
+    private static void fel1equ() {
+        for (int i = 0; i < 5; i++) {
+            eq();
+        }
     }
 
     private static void eq(){
