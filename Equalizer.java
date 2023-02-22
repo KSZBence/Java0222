@@ -7,10 +7,19 @@ public class Equalizer {
     static Random rnd = new Random();
     
     public static void main(String[] args) {
-        fel1equ();
+        fel_1_randomEqu();
+        fel_2_megadottEq();
     }
 
-    private static void fel1equ() {
+    private static void fel_2_megadottEq() {
+        eq();
+        eq(12);
+        eq();
+        eq(8);
+        eq();
+    }
+
+    private static void fel_1_randomEqu() {
         for (int i = 0; i < 5; i++) {
             eq();
         }
@@ -23,4 +32,12 @@ public class Equalizer {
         }
         System.out.println();
     }
+    
+    private static void eq(int hossz){
+        for (int i = 0; i < hossz; i++) {
+            System.out.print("\u001B[45m" + " ");
+        }
+        System.out.println();
+    }
+    
 }
