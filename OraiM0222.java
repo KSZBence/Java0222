@@ -7,22 +7,40 @@ package oraim0222;
  */
 public class OraiM0222 {
     public static void main(String[] args) {
-        kiir("Az első 10 szám összege: "+elso10SzamOsszege());
-        kiir(1+"+"+2);
-        String szoveg = "\n%d + %d = %d\n".formatted(1, 2, osszead(1, 2));
-        kiir(szoveg);
-        int[] szamok = {1, 2, 3, 4};
-        szoveg = "A 4 szám összege: %d\n".formatted(Osszeg4Szam(szamok));
+        feladatok();
+    }
+
+//    private static int Osszeg4Szam(int[] szamok) { nem ez így volt a feladat
+//        int osszeg = 0;
+//        for (int i = 0; i < szamok.length; i++) {
+//            osszeg += szamok[i];
+//        }
+//        return osszeg;
+//    }
+
+    private static void feladatok() {
+        fel1Elso10Szam();
+        fel2osszeg();
+        fel4OsszegGyok();
+    }
+
+    private static void fel4OsszegGyok() {
+        int a = 3, b = 4, c = 2;
+        int osszeg = osszead(a, b);
+        osszeg = osszead(osszeg, c);
+        String szoveg = "A %d+%d+%d gyöke: %.2f\n".formatted(a, b, c, Math.sqrt(osszeg));
         kiir(szoveg);
     }
 
-    private static int Osszeg4Szam(int[] szamok) {
-        int osszeg = 0;
-        for (int i = 0; i < szamok.length; i++) {
-            osszeg += szamok[i];
-        }
-        return osszeg;
+    private static void fel2osszeg() {
+        String szoveg = "\n%d + %d = %d\n".formatted(1, 2, osszead(1, 2));
+        kiir(szoveg);
     }
+
+    private static void fel1Elso10Szam() {
+        kiir("Az első 10 szám összege: "+elso10SzamOsszege());
+    }
+    
 
     private static void kiir(String szoveg) {
         System.out.print(szoveg);
